@@ -19,13 +19,13 @@ public class Stack {
      */
     public static void main(String[] args) {
     
-        Pop();
         Push(1);
         Push(2);
-        Pop();
         Push(3);
-        System.out.println(stack.get(0));
-        System.out.println(stack.get(1));
+        Pop();
+        Pop();
+        Pop();
+        Pop();
     }
     
     static void Push(int pushedValue){
@@ -35,7 +35,9 @@ public class Stack {
     static void Pop(){
         if(!stack.isEmpty())
         {
-            stack.remove(stack.size()-1);            
+            System.out.println(stack.get(stack.size()-1) + " was removed.");            
+            stack.remove(stack.size()-1);   
+
         }
         
 
