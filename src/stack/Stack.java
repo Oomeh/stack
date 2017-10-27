@@ -13,24 +13,31 @@ import java.util.ArrayList;
  */
 public class Stack {
     static ArrayList<Integer> stack = new ArrayList<Integer>();     
-    static int i = 0;
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-       
-            
-        
+    
+        Pop();
+        Push(1);
+        Push(2);
+        Pop();
+        Push(3);
+        System.out.println(stack.get(0));
+        System.out.println(stack.get(1));
     }
     
     static void Push(int pushedValue){
-        stack.add(0, pushedValue);
-        i++;
-
+        stack.add(stack.size(), pushedValue);
     }
     
     static void Pop(){
-        stack.remove(i-1);
+        if(!stack.isEmpty())
+        {
+            stack.remove(stack.size()-1);            
+        }
+        
+
     }
 }
