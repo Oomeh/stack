@@ -11,35 +11,24 @@ import java.util.ArrayList;
  *
  * @author bvance
  */
-public class Stack {
+public class myTestStack {
     static ArrayList<Integer> stack = new ArrayList<Integer>();     
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    
-        Push(1);
-        Push(2);
-        Push(3);
-        Pop();
-        Pop();
-        Pop();
-        Pop();
-    }
-    
-    static void Push(int pushedValue){
-        stack.add(stack.size(), pushedValue);
-    }
-    
-    static void Pop(){
-        if(!stack.isEmpty())
-        {
-            System.out.println(stack.get(stack.size()-1) + " was removed.");            
-            stack.remove(stack.size()-1);   
-
-        }
-        
+        myStack stack1 = new myStack();
+        stack1.Push(1);
+        stack1.Push(2);
+        stack1.Push(3);
+        System.out.println(stack1.Pop() + " was removed");
+        System.out.println(stack1.Pop() + " was removed");
+        System.out.println(stack1.Pop() + " was removed");
+        System.out.println(stack1.Pop() + " was removed");
 
     }
+    
+    
+
 }
